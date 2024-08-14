@@ -16,7 +16,7 @@ import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.util.Units;
 
 public final class Constants {
-        public static final boolean TUNING_MODE = false;
+        public static final boolean TUNING_MODE = true;
 
         public enum Robot {
                 ALPHA,
@@ -59,7 +59,7 @@ public final class Constants {
                 public static final boolean GYRO_INVERSION = false; // Always ensure Gyro is CCW+ CW-
 
                 public static final PIDConstants AUTO_TRANSLATION = new PIDConstants(3); // Previouse value modified on
-                                                                                          // 3/20/24 15 25
+                                                                                         // 3/20/24 15 25
                 public static final PIDConstants AUTO_ROTATION = new PIDConstants(0.8); // Previouse value modified on
                                                                                         // 3/20/24 1.5 2.0
 
@@ -104,16 +104,16 @@ public final class Constants {
 
                 public static final SDSModules MODULE_TYPE = SDSModules.MK4i;
 
-                public static final boolean SWERVE_TUNING_MODE = false;
+                public static final boolean SWERVE_TUNING_MODE = true;
 
                 public static final SwerveModuleConstants[] SWERVE_MODULE_CONSTANTS = new SwerveModuleConstants[] {
-                                new SwerveModuleConstants(0, Rotation2d.fromDegrees(346.81), MODULE_TYPE,
+                                new SwerveModuleConstants(0, Rotation2d.fromDegrees(0.461182 * 360), MODULE_TYPE,
                                                 SWERVE_TUNING_MODE, DRIVE_CONFIG, ANGLE_CONFIG),
-                                new SwerveModuleConstants(1, Rotation2d.fromDegrees(21.09), MODULE_TYPE,
+                                new SwerveModuleConstants(1, Rotation2d.fromDegrees(0.561035 * 360), MODULE_TYPE,
                                                 SWERVE_TUNING_MODE, DRIVE_FLIPPED_CONFIG, ANGLE_FLIPPED_CONFIG),
-                                new SwerveModuleConstants(2, Rotation2d.fromDegrees(25.48), MODULE_TYPE,
+                                new SwerveModuleConstants(2, Rotation2d.fromDegrees(0.570557 * 360), MODULE_TYPE,
                                                 SWERVE_TUNING_MODE, DRIVE_CONFIG, ANGLE_CONFIG),
-                                new SwerveModuleConstants(3, Rotation2d.fromDegrees(126.29), MODULE_TYPE,
+                                new SwerveModuleConstants(3, Rotation2d.fromDegrees(0.336426 * 360 + 180), MODULE_TYPE,
                                                 SWERVE_TUNING_MODE, DRIVE_FLIPPED_CONFIG, ANGLE_FLIPPED_CONFIG),
                 };
         }
@@ -147,7 +147,7 @@ public final class Constants {
                                 MotorConfig.Mode.BRAKE);
 
                 public static final int ENCODER_ID = 4;
-                public static final double ENCODER_OFFSET = 82.5;//82;//-142.1;
+                public static final double ENCODER_OFFSET = 82.5;// 82;//-142.1;
                 public static final double PIVOT_GEAR_RATIO = 66.666;
                 public static final double KS = 0;
                 public static final double KG = 0.21;
