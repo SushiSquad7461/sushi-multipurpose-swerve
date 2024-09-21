@@ -16,7 +16,7 @@ import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.util.Units;
 
 public final class Constants {
-        public static final boolean TUNING_MODE = true;
+        public static final boolean TUNING_MODE = false;
 
         public enum Robot {
                 ALPHA,
@@ -104,7 +104,7 @@ public final class Constants {
 
                 public static final SDSModules MODULE_TYPE = SDSModules.MK4i;
 
-                public static final boolean SWERVE_TUNING_MODE = true;
+                public static final boolean SWERVE_TUNING_MODE = false;
 
                 public static final SwerveModuleConstants[] SWERVE_MODULE_CONSTANTS = new SwerveModuleConstants[] {
                                 new SwerveModuleConstants(0, Rotation2d.fromDegrees(0.461182 * 360), MODULE_TYPE,
@@ -129,7 +129,7 @@ public final class Constants {
                                 26,
                                 20,
                                 false,
-                                PIDConfig.getPid(0.03, 0.000, 2.0, 0.0), // 0.04 1.5
+                                PIDConfig.getPid(0.03, 0.000, 2.5, 0.0), // 0.04 1.5
                                 MotorConfig.Mode.BRAKE);
 
                 public static final MotorConfig SHOOTER_CONFIG_TOP = new MotorConfig(
@@ -143,11 +143,11 @@ public final class Constants {
                                 28,
                                 40,
                                 true,
-                                PIDConfig.getPid(0.00009, 0.0, 0.000174),
+                                PIDConfig.getPid(0.00002, 0.0, 0.000174), //0.00009, 0.0, 0.000174
                                 MotorConfig.Mode.BRAKE);
 
                 public static final int ENCODER_ID = 4;
-                public static final double ENCODER_OFFSET = 82.5;// 82;//-142.1;
+                public static final double ENCODER_OFFSET = -49;// 82;//-142.1;
                 public static final double PIVOT_GEAR_RATIO = 66.666;
                 public static final double KS = 0;
                 public static final double KG = 0.21;
@@ -199,13 +199,13 @@ public final class Constants {
                 public static final double ENCODER_ANGLE_OFFSET = 71; // 60
                 public static final double INTAKE_GEAR_RATIO = 21.701;
 
-                public static final double INTAKE_SPEED = 0.9;
+                public static final double INTAKE_SPEED = 0.5;
 
                 public static final double ERROR_LIMIT = 1.0;
                 public static final double MAX_ERROR = 4.0;
 
                 public static final double RAISED_POS = 110;
-                public static final double LOWERED_POS = -10; // -26
+                public static final double LOWERED_POS = -12; // -26
 
                 public static final MotorConfig INTAKE_CONFIG = new MotorConfig(
                                 21,
